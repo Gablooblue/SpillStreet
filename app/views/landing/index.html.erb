@@ -1,15 +1,21 @@
 <section class = "hero is-danger">
   <div class = "hero-body">
     <div class = "container has-text-centered">
+      <div>
+        <%= image_tag "logo.png",width: "20%"%>
+      </div>
       <h1 class = "title is-1">
         Rant about your orgs
       </h1>
       <p class = "subtitle">
-        Search for your orgs below
+        Anonymously post and rant about your orgs
       </p>
       <div class = "has-text-centered">
           
-      <%= render "shared/search-input"%>
+      Use this search bar to look for an org
+      <div style= "width:50%; margin:0 auto;">
+        <%= render "shared/search-input"%>
+      </div>
       </div>
     </div>
   </div>
@@ -17,9 +23,9 @@
 <section class = "section ">
   <div class="container">
     <h3 class="title is-2 has-text-centered">Recent Rants</h3>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-desktop">
       <% @rants.each do |rant| %>
-        <div class="column is-half">
+        <div class="column is-half-desktop">
           <%= render "rants/rant", rant: rant %>
         </div>
 
