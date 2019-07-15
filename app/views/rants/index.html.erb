@@ -1,0 +1,17 @@
+<section class="section">
+  <div class="container">
+
+    <h1 class = "title has-text-centered">Rants about <%= @organization.name %></h1>
+
+    <div class="columns is-multiline">
+      <% @rants.each do |rant| %>
+        <div class="column is-full">
+          <%= render "rants/rant", rant: rant %>
+        </div>
+      <% end %>
+
+    </div>
+
+
+  </div>
+</section>

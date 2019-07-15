@@ -1,0 +1,12 @@
+<%= search_form_for @q do |f| %>
+  <div class="field">
+    <p class = "control has-icons-left">
+      <span class = "icon is-left">
+        <%= fa_icon "search" %>
+
+      </span>
+      <%= f.search_field :name_cont, placeholder: "Search for Organizations", class: 'input' %>
+    </p>
+
+  </div>
+<% end %>

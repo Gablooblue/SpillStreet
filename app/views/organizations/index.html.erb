@@ -1,0 +1,22 @@
+<section class = "section">
+  <div class="containers">
+    <h1 class = "title has-text-centered">Organizations</h1>
+
+
+    <div style = "padding:20px;">
+      <%= render "shared/search-input"%>
+    </div>
+    <div class="columns is-multiline">
+      <% @organizations.each do |organization| %>
+        <div class="column is-full">
+        <%= render "organizations/organization", organization: organization %>
+        
+        </div>
+      <% end %>
+    </div>
+
+
+
+  </div>
+
+</section>

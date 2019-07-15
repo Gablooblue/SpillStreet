@@ -1,0 +1,12 @@
+<%= render "organizations/organization-header", organization: @rant.organization %>
+<section class="section">
+  <div class="container">
+    <%= render "rants/rant", rant: @rant %>
+
+    
+    <div class="has-text-centered" style="margin-top: 2em;">
+      <%= link_to "Click here to see more rants about " + @rant.organization.name, @rant.organization, class: "button is-info " %>
+      
+    </div>
+  </div>
+</section>

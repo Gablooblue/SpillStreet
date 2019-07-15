@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spill Street</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+          Spill Street
+        <% end %>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Organizations
+            </a>
+
+            <div class="navbar-dropdown">
+              <%= link_to "Add an Organization", new_organization_path, class: 'navbar-item' %>
+              <%= link_to "View all organizations", organizations_path, class: "navbar-item" %>
+            </div>
+          </div>
+        </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <%= search_form_for @q do |f| %>
+                <div class="field">
+                  <p class = "control has-icons-left">
+                    <span class = "icon is-left">
+                      <%= fa_icon "search" %>
+
+                    </span>
+                    <%= f.search_field :name_cont, placeholder: "Search Orgs", class: 'input is-expanded' %>
+                  </p>
+
+                </div>
+              <% end %>
+            </div>
+
+          </div>
+
+      </div>
+    </nav>
+    <p id="notice"><%= notice %></p>
+    <%= yield %>
+  </body>
+</html>

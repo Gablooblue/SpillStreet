@@ -1,0 +1,17 @@
+@import'bulma';
+@import 'font-awesome';
+
+.navbar-menu {
+    animation: navAnimOpen .2s ease-in-out;
+}
+
+@keyframes navAnimOpen {
+  0% {display: none;opacity: 0;max-height: 0;}
+  1% {display: block;opacity: 0;}
+  100% {opacity: 1;max-height: 396px;}
+}
+
+
+.content {
+    font-size: 15px;
+}
