@@ -12,6 +12,8 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/autocomplete
+//= require autocomplete-rails
 //= require activestorage
 //= require turbolinks
 //= require readmore.min
@@ -52,7 +54,6 @@ document.addEventListener('turbolinks:load', function(){
         });
     }
 
-    $('[data-toggle="tooltip"]').tooltip();
 
 
 });

@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
+  autocomplete :organization, :name, full: true
 
   # GET /organizations
   # GET /organizations.json
