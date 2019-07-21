@@ -54,6 +54,10 @@ document.addEventListener('turbolinks:load', function(){
         });
     }
 
+    $(".notification").delay(2000).fadeOut(500, function(){
+        $(".notification").alert('close');
+    });
+
 
 
 });

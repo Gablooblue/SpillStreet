@@ -7,7 +7,7 @@
         </figure>
       </div>
       <div class="media-content">
-        <p class="title is-4">Rant about <%= link_to rant.organization.name, rant.organization %></p>
+        <p class="title is-4">Rant#<%= rant.id %> - <%= link_to rant.organization.name, rant.organization %></p>
         <p class= "subtitle is-7"><%= time_ago_in_words(rant.created_at) %> ago</p>
       </div>
     </div>
