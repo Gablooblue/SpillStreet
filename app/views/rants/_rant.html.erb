@@ -17,11 +17,16 @@
     </div>
     <nav class="level is-mobile" style="margin-top: 1em;">
       <div class="level-left">
-        <div class="level-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<%= organization_rant_url(rant.organization, rant) %>">Share on Facebook</a>
+        <div class = "level-item">
+          <strong>
+            Share this rant 
+          </strong>
         </div>
         <div class="level-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<%= organization_rant_url(rant.organization, rant) %>">Share on Facebook</a>
+          <a data-toggle="tooltip" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=<%= rant_url(rant) %>"><%= fa_icon "facebook" %></a>
+        </div>
+        <div class="level-item">
+          <a data-toggle="tooltip" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=<%= rant_url(rant) %>"><%= fa_icon "twitter" %></a>
         </div>
       </div>
     </nav>

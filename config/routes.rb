@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'landing/index'
-  resources :organizations do
-    resources :rants
+  resources :organizations, except: [:destroy] do
+    resources :rants, shallow: true, except: [:edit, :destroy, :update]
     collection do
       match 'search' => 'organizations#search', via: [:get, :post], as: :search
     end

@@ -1,6 +1,6 @@
 class RantsController < ApplicationController
-  before_action :set_organization
-  before_action :set_rant, only: [:show, :edit, :update, :destroy]
+  before_action :set_organization, except: [:show]
+  before_action :set_rant, only: [:edit, :update, :destroy]
   # GET /rants
   # GET /rants.json
   def index
@@ -10,6 +10,7 @@ class RantsController < ApplicationController
   # GET /rants/1
   # GET /rants/1.json
   def show
+    @rant = Rant.find(params[:id])
   end
 
   # GET /rants/new

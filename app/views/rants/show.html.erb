@@ -1,4 +1,11 @@
 <%= render "organizations/organization-header", organization: @rant.organization %>
+<meta property="og:title" content= "Rant#<%= @rant.id %> - <%= @rant.organization.name %>">
+<meta property="twitter:title" content= "Rant#<%= @rant.id %> - <%= @rant.organization.name %>">
+<meta property="og:description" content= "<%= @rant.body %>">
+<meta property="twitter:description" content= "<%= @rant.body %>">
+
+<% title ("Rant#" + @rant.id.to_s).to_s %>
+
 <section class="section">
   <div class="container">
     <%= render "rants/rant", rant: @rant %>

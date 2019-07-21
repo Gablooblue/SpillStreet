@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Spill Street</title>
+    <title>
+      <% if content_for?(:title) %>
+        <%= (yield(:title) + " | ").to_s %>
+      <% end %>
+      Spill Street
+    </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
