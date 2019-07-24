@@ -26,7 +26,7 @@ production:
   timeout: 5000
   encoding: utf8
   host: db
-  database: aas06gtswo78o1
+  database: postgres 
   host: aas06gtswo78o1.cd42h1atygye.ap-southeast-1.rds.amazonaws.com 
   username: gablooblue
   password: ithinkthereforeiam
