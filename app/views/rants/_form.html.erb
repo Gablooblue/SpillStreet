@@ -13,11 +13,18 @@
 
   <%= form.hidden_field :organization_id, value: @organization.id %>
 
-  <div class="field">
+  <div class="field" style= "margin-bottom: 0;">
     <%= form.text_area :body, class: "textarea", rows: "5", placeholder: "Rant out your feelings, talk shit, spill tea, let everything out here"%>
+
+    <div class = "has-text-right">
+      <small>
+      By clicking Submit Rant, you agree to our <%= link_to "Terms and Conditions", terms_and_conditions_path %>, <%= link_to "Privacy Policy", privacy_policy_path %>, and our <%= link_to "Community Guidelines", community_guidelines_path %>
+      </small>
+  </div>
   </div>
 
-  <div class="field is-grouped is-grouped-right">
+
+  <div class="field is-grouped is-grouped-right" style = "margin-top: 0;">
     <p class="control">
       <%= form.submit "Submit Rant", class: "button is-medium is-primary" %>
     </p>
