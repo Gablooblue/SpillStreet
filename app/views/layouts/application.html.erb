@@ -12,6 +12,7 @@
     <% if content_for?(:head) %>
     <%= yield(:head) %>
     <% end %>
+    <%= display_meta_tags(default_meta_tags)%>
 
     <%= render 'application/favicon' %>
     
