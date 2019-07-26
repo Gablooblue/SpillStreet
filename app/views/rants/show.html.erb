@@ -1,6 +1,9 @@
-<%= render "organizations/organization-header", organization: @rant.organization %>
+
+<% content_for :head do %>
 <%= display_meta_tags og: { title:  "Rant#" + @rant.id.to_s + " - " + @rant.organization.name , description: @rant.body } %>
 <%= display_meta_tags twitter: { title:  "Rant#" + @rant.id.to_s + " - " + @rant.organization.name , description: @rant.body } %>
+<% end %>
+<%= render "organizations/organization-header", organization: @rant.organization %>
 
 <% title ("Rant#" + @rant.id.to_s).to_s %>
 

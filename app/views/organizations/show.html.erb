@@ -1,5 +1,7 @@
+<% content_for :head do %>
 <%= display_meta_tags og: { title: @organization.name + " | Spillstreet", description: "Rant about " + @organization.name } %>
 <%= display_meta_tags twitter: { title: @organization.name + " | Spillstreet", description: "Rant about " + @organization.name } %>
+<% end %>
 
 <% title @organization.name %>
 <%= render "organizations/organization-header", organization: @organization %>
