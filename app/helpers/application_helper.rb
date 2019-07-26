@@ -5,8 +5,8 @@ module ApplicationHelper
 
   def default_meta_tags
     {
-      twitter: {image: "s3://elasticbeanstalk-ap-southeast-1-740434333056/spillstreet.PNG", card: "summary"},
-      og: {image: "s3://elasticbeanstalk-ap-southeast-1-740434333056/spillstreet.PNG"}
+      twitter: {image: "https://elasticbeanstalk-ap-southeast-1-740434333056.s3-ap-southeast-1.amazonaws.com/spillstreet.PNG", card: "summary"},
+      og: {image: "https://elasticbeanstalk-ap-southeast-1-740434333056.s3-ap-southeast-1.amazonaws.com/spillstreet.PNG"}
     }
   end
 end
