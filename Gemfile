@@ -71,10 +71,7 @@ gem 'rails-jquery-autocomplete'
 
 gem 'jquery-ui-rails'
 
-group :production do
-  gem "pg"
-end
-
+gem "pg"
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
