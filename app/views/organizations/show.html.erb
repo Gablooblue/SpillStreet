@@ -1,7 +1,5 @@
-<meta property="og:title" content= "<%= @organization.name %> | Spillstreet">
-<meta property="twitter:title" content= "<%= @organization.name %> | Spillstreet">
-<meta property="og:description" content= "Rant about <%= @organization.name%> on Spill Street">
-<meta property="twitter:description" content= "Rant about <%= @organization.name%> on Spill Street">
+<%= display_meta_tags og: { title: @organization.name + " | Spillstreet", description: "Rant about " + @organization.name } %>
+<%= display_meta_tags twitter: { title: @organization.name + " | Spillstreet", description: "Rant about " + @organization.name } %>
 
 <% title @organization.name %>
 <%= render "organizations/organization-header", organization: @organization %>
