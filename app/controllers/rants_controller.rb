@@ -69,7 +69,7 @@ class RantsController < ApplicationController
     end
 
     def set_organization
-      @organization = Organization.find_by(params[:organization_id])
+      @organization = Organization.find(params[:organization_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
